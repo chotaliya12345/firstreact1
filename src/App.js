@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React With Abhishek
+          Learn React Directory Stuctuer
         </a>
       </header>
     </div>
