@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React Directory Stuctuer
+          Learn React Directory Stuctuer (Home Work In React)
         </a>
       </header>
     </div>
