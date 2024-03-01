@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CountryFun from './CountryFun';
 
 function CityFun(props) {
 
@@ -7,9 +8,9 @@ function CityFun(props) {
     const [cityPopulation, setCityPopulation] = useState('6,520,000')
 
     const ChangeCity = () => {
-        setCityName('GandhiNagar')
-        setCityArea('326 km²')
-        setCityPopulation('14.54 Lakhs')
+        setCityName('New York')
+        setCityArea('783.8 km²')
+        setCityPopulation('84.7 lakhs')
     }
 
     return (
@@ -21,6 +22,7 @@ function CityFun(props) {
             <h2>My city population is {cityPopulation}</h2>
 
             <button onClick={ChangeCity}> Change city</button>
+            <CountryFun cityname={cityName}  />
         </div>
     );
 }

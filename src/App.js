@@ -10,11 +10,11 @@ function App() {
   return (
     <>
       {/* <Country />
-      <City />
-      <CountryFun />
-      <CityFun /> */}
-      <Counter />
-      <CounterClass />
+      <City /> */}
+      {/* <CountryFun /> */}
+      <CityFun />
+      {/* <Counter /> */}
+      {/* <CounterClass /> */}
     </>
   );
 }
