@@ -12,9 +12,9 @@ class City extends Component {
     
     ChangeCity = () => {
         this.setState({
-            name: 'GandhiNagar',
-            cityarea: '326 km²',
-            population: '14.54 Lakhs'
+            name: 'New York',
+            cityarea: '783.8 km²',
+            population: '84.7 lakhs'
         })
     }
   
@@ -22,9 +22,9 @@ class City extends Component {
     return (
       <>
         <div>City</div>
-        <h1>My City Is {this.state.name}</h1>
-        <h2>City area is: {this.state.cityarea}</h2>
-        <h2>City population is: {this.state.population}</h2>
+        <h1>My City Is {this.props.countryName === 'India' ? 'Surat' : 'New York'}</h1>
+        <h2>City area is: {this.props.countryName === 'India' ? '461.6 km²' : '783.8 km²'}</h2>
+        <h2>City population is: {this.props.countryName === 'India' ? '6,520,000' : '84.7 lakhs'}</h2>
 
         <button onClick={this.ChangeCity}>Change City</button>
       </>

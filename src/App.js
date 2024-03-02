@@ -1,4 +1,5 @@
 import "./App.css";
+import Medicines from "./app/components/containers/Medicines";
 import City from "./app/components/practice1/City";
 import CityFun from "./app/components/practice1/CityFun";
 import Counter from "./app/components/practice1/Counter";
@@ -9,12 +10,13 @@ import CountryFun from "./app/components/practice1/CountryFun";
 function App() {
   return (
     <>
-      {/* <Country />
-      <City /> */}
+      {/* <Country /> */}
+      {/* <City />  */}
       {/* <CountryFun /> */}
-      <CityFun />
+      {/* <CityFun /> */}
       {/* <Counter /> */}
       {/* <CounterClass /> */}
+      <Medicines />
     </>
   );
 }
