@@ -1,13 +1,16 @@
-import React from 'react';
+import React from "react";
 
-function Card({ data }) {
-    console.log(data);
-    return (
-        <div>
-            <h1>{data.name}</h1>
-            <p>{data.price}</p>
-        </div>
-    );
+function Card(props) {
+  const { name, degree, specialization, desc } = props.dataD;
+
+  return (
+    <div className="doctor-card">
+      <h2>{name}</h2>
+      <p>{degree}</p>
+      <p>{specialization}</p>
+      <p>{desc}</p>
+    </div>
+  );
 }
 
 export default Card;
