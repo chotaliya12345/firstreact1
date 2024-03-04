@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Card from "../practice1/Card";
+import Card from "../../components/Card";
 
 const DoctorData = [
   {
@@ -65,7 +65,7 @@ class Doctor extends Component {
     return (
       <div>
         {DoctorData.map((v) => (
-          <Card key={v.id} dataD={v} />
+          <Card dataD={v} />
         ))}
       </div>
     );

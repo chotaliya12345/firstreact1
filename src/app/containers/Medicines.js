@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../practice1/Card";
+import Card from "../components/Card";
 
 const medicinesData = [
   {
@@ -62,7 +62,7 @@ const medicinesData = [
 
 function Medicines(props) {
   return (
-    <div>
+    <div className="card">
       {medicinesData.map((v) => (
         <Card data={v} />
       ))}
@@ -71,3 +71,5 @@ function Medicines(props) {
 }
 
 export default Medicines;
+
+
