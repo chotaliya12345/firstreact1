@@ -17,9 +17,6 @@ function CountryFun(props) {
       <h2>My country time zone is {timeZone}</h2>
 
       <button onClick={changeCountry}>Change Country</button>
-{/* 
-      <h2>Your choices {count}</h2>
-      <button onClick={() => setCount(count + 1)}>Click me</button> */}
 
       <CityFun countryFunName = {countryName} />
     </div>

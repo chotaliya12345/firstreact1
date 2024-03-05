@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../components/Card";
+import Card from "../components/card/Card";
 
 const medicinesData = [
   {
@@ -62,10 +62,12 @@ const medicinesData = [
 
 function Medicines(props) {
   return (
-    <div className="card">
-      {medicinesData.map((v) => (
-        <Card data={v} />
-      ))}
+    <div style={{display: "flex", backgroundColor: "lightblue"}}>
+      {
+        medicinesData.map((v) => (
+          <Card data={v}/>
+        ))
+      }
     </div>
   );
 }

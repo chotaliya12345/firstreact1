@@ -16,14 +16,16 @@
 // export default Card;
 
 import React from "react";
-import style from "./Card.modules.css"
+import style from './Card.modules.css'
 
 function Card({ data }) {
   return (
-    <>
+    <div className="card">
       <p>{data.name}</p>
       <p>{data.price}</p>
-    </>
+      <p>{data.expiry}</p>
+      <p>{data.desc}</p>
+    </div>
   );
 }
 
