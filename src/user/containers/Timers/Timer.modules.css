@@ -1,10 +1,10 @@
-/* Timer.css */
-
-div {
+.timer {
   text-align: center;
+  width: 450px;
   margin: 20px;
-  padding: 50px;
+  padding: 30px;
   background-color: aqua;
+  box-shadow: 0 4px 8px rgba(4, 8, 228, 0.9);
 }
   
 h2 {

@@ -15,10 +15,6 @@ function TimerFun() {
     };
   }, []);
 
-  useEffect(() => {
-    console.log("dfhfg");
-  }, [time]);
-
   return (
     <div>
       <h2>Timer</h2>
