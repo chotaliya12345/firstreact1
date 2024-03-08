@@ -12,8 +12,8 @@ function Products(props) {
   const [productsData, setProductsData] = useState([]);
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("");
-  let [category, setCategory] = useState([])
-
+  let [category, setCategory] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   useEffect(() => {
     getData();
@@ -23,8 +23,16 @@ function Products(props) {
     const respons = await fetch("https://fakestoreapi.com/products");
     const data = await respons.json();
 
+    let uniqCategory = [];
+
+    data.map((v) => {
+      if (!uniqCategory.includes(v.category)) {
+        uniqCategory.push(v.category);
+      }
+    });
+    setCategory(uniqCategory);
+
     setProductsData(data);
-    setCategory(data)
   };
 
   const handleFilter = () => {
@@ -47,18 +55,20 @@ function Products(props) {
       }
     });
 
+    if (selectedCategory) {
+      fData = fData.filter((v) => v.category === selectedCategory);
+    }
+
     return fData;
   };
 
   const finalData = handleFilter();
 
-  console.log(finalData);
-
   return (
-    <div className="container">
+    <div className="container bg-primary">
       <div className="row">
         <h2 className="text-center"> Product </h2>
-        <div className="d-flex m-10">
+        <div className="m-10">
           <div className="mb-3">
             <input
               type="text"
@@ -79,36 +89,21 @@ function Products(props) {
               <option value={"za"}>Product: Z - A</option>
             </select>
           </div>
-          <select>
-            <option value="0">--Category--</option>
-            {
-              // function changeCat() {
-              //     let uniq = []
-              //         for (let index = 0; index < category.length; index++) {
-              //             if(uniq.indexOf(category[index].category===-1)){
-              //                 uniq.push(category[index].category);
-              //             };
 
-              //         }
-              //         return uniq
-              //     }
-
-              // console.log(changeCat());
-              category.map((v) => (
-                <option value={v.category}> {v.category}</option>
-
-              ))
-
-              //   category.reduce((acc,v)=>{
-              //     if (acc[v.category]){
-              //         console.log(v.category)
-              //         const setCate=acc[v.category].findIndex((data)=>data.category===v.category)
-              //         console.log(v.category,setCate);
-              //     }
-
-              //   })
-            }
-          </select>
+          <button
+            style={{ background: selectedCategory === "" ? "red" : "none" }}
+            onClick={() => setSelectedCategory("")}
+          >
+            All Selected
+          </button>
+          {category.map((v) => (
+            <button
+              style={{ background: v === selectedCategory ? "red" : "none" }}
+              onClick={() => setSelectedCategory(v)}
+            >
+              {v}
+            </button>
+          ))}
         </div>
         {finalData.map((v) => (
           <div className="col-md-4 gy-4">
