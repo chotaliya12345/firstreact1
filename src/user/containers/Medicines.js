@@ -73,5 +73,3 @@ function Medicines(props) {
 }
 
 export default Medicines;
-
-

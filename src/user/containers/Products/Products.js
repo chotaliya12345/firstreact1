@@ -7,6 +7,7 @@ import {
   CardText,
   Button,
 } from "reactstrap";
+import { Spinner } from "reactstrap";
 
 function Products(props) {
   const [productsData, setProductsData] = useState([]);
@@ -66,6 +67,10 @@ function Products(props) {
 
   return (
     <div className="container bg-primary">
+      <div className="text-center mt-5">
+        <Spinner color="black" style={{ width: "3rem", height: "3rem" }} />
+        <p>Loading...</p>
+      </div>
       <div className="row">
         <h2 className="text-center"> Product </h2>
         <div className="m-10">
