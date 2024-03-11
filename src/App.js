@@ -1,19 +1,21 @@
 import "./App.css";
-import Doctor from "./user/containers/Doctor/Doctor";
-import Medicines from "./user/containers/Medicines";
-import Products from "./user/containers/Products/Products";
-import Timer from "./user/containers/Timers/Timer";
-import TimerFun from "./user/containers/Timers/TimerFun";
+import Header from "./user/components/Header/Header";
+import { Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Home from "./user/containers/Home/Home";
+import Contact from "./user/containers/Contact/Contact";
+import Products from "./user/containers/Products/Products";
 
 function App() {
   return (
     <>
-      {/* <Medicines /> */}
-      {/* <Doctor /> */}
-      {/* <Timer /> */}
-      {/* <TimerFun /> */}
-      <Products />
+      <Header />
+
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/Products" element={<Products />} />
+        <Route exact path="/Contact" element={<Contact />} />
+      </Routes>
     </>
   );
 }
